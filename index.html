@@ -408,28 +408,37 @@
         <div style="padding: 0 25px 120px; flex-grow: 1;">
             <p style="text-align: center; color: #94a3b8; font-size: 14px; margin-bottom: 30px;">Aplikasi pencatat keuangan harian yang simpel, cepat, dan beroperasi 100% offline. Sangat cocok untuk mengontrol arus keuangan pribadi atau keluarga mu.</p>
             
-            <div style="background: rgba(255, 215, 0, 0.03); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 16px; padding: 20px; margin-bottom: 25px;">
-                <h3 style="color: var(--gold); font-weight: 800; margin: 0 0 15px 0; font-size: 16px; display: flex; align-items: center; gap: 10px; letter-spacing: 1px;">
-                    ✨ UPGRADE KE VERSI PRO!
-                </h3>
-                <ul style="padding-left: 0; margin: 0; list-style: none; display: flex; flex-direction: column; gap: 12px; font-size: 13px;">
-                    <li style="display: flex; align-items: flex-start; gap: 10px;">
-                        <span style="color: var(--gold); font-size: 18px; line-height: 1;">•</span>
-                        <span><strong style="color: #fff;">Smart Cloud Sync:</strong> Simpan dan tarik data per bulan via Cloud (Google Sheets) dengan aman dan praktis.</span>
+            <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 215, 0, 0.4); border-radius: 16px; padding: 20px; margin-bottom: 25px;">
+                <h4 class="audiowide-regular" style="color: var(--gold); margin-top: 0; margin-bottom: 8px; font-size: 14px; text-align: center; text-shadow: 0 0 8px rgba(255, 215, 0, 0.3);">
+                    🔥 UPGRADE KE VERSI PRO!
+                </h4>
+                <p style="font-size: 11px; color: var(--text-muted); margin-bottom: 15px; text-align: center; line-height: 1.4;">
+                    Buka kunci fitur eksklusif berikut untuk pengelolaan keuangan yang lebih canggih:
+                </p>
+                <ul style="list-style: none; padding: 0; margin: 0; font-size: 12px; color: var(--text-light); line-height: 1.8;">
+                    <li style="display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 6px; margin-bottom: 6px;">
+                        <span style="font-size: 12px;">❌</span> <span style="color: #bbbbbb;">Backup Cloud Database Google</span>
                     </li>
-                    <li style="display: flex; align-items: flex-start; gap: 10px;">
-                        <span style="color: var(--gold); font-size: 18px; line-height: 1;">•</span>
-                        <span><strong style="color: #fff;">Grafik Visual Detail:</strong> Analisis kemana uangmu mengalir lewat grafik interaktif berwarna-warni.</span>
+                    <li style="display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 6px; margin-bottom: 6px;">
+                        <span style="font-size: 12px;">❌</span> <span style="color: #bbbbbb;">Premium Custom Design 🎨</span>
                     </li>
-                    <li style="display: flex; align-items: flex-start; gap: 10px;">
-                        <span style="color: var(--gold); font-size: 18px; line-height: 1;">•</span>
-                        <span><strong style="color: #fff;">Pencarian Super Pintar:</strong> Lacak riwayat transaksi lintas bulan dan tahun secepat kilat.</span>
+                    <li style="display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 6px; margin-bottom: 6px;">
+                        <span style="font-size: 12px;">❌</span> <span style="color: #bbbbbb;">Keamanan PIN Dana Darurat 🔒</span>
                     </li>
-                    <li style="display: flex; align-items: flex-start; gap: 10px;">
-                        <span style="color: var(--gold); font-size: 18px; line-height: 1;">•</span>
-                        <span><strong style="color: #fff;">Premium Custom Design:</strong> Jadikan aplikasi ini benar-benar eksklusif milikmu! Ganti nama aplikasi, ubah tema warna, hingga request tambahan fitur khusus sesuka hati.</span>
+                    <li style="display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 6px; margin-bottom: 6px;">
+                        <span style="font-size: 12px;">❌</span> <span style="color: #bbbbbb;">Menu Ekstra: Hutang, Piutang, Titipan</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 8px; border-bottom: 1px solid rgba(255,255,255,0.05); padding-bottom: 6px; margin-bottom: 6px;">
+                        <span style="font-size: 12px;">❌</span> <span style="color: #bbbbbb;">Pencarian Riwayat Transaksi Cerdas</span>
+                    </li>
+                    <li style="display: flex; align-items: center; gap: 8px;">
+                        <span style="font-size: 12px;">❌</span> <span style="color: #bbbbbb;">Grafik Portofolio Visual Dinamis</span>
                     </li>
                 </ul>
+
+                <a href="https://qnt-11.github.io/DEMO-MODE/" target="_blank" style="display: flex; justify-content: center; align-items: center; gap: 8px; background-color: var(--gold); color: #000000; padding: 14px; border-radius: 8px; font-weight: 800; text-decoration: none; margin-top: 20px; font-size: 12px; box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3); transition: transform 0.2s;">
+                    🔗 COBA DEMO VERSI PRO
+                </a>
             </div>
 
             <div style="text-align: center; margin-bottom: 35px;">
@@ -519,7 +528,6 @@
     // =========================================================
     const APP_VERSION = "1.01"; 
 
-    // BUG FIX #20: Path Service Worker diubah jadi absolut relative agar tidak error di sub-folder
     if ('serviceWorker' in navigator) {
         navigator.serviceWorker.register('sw.js').catch(() => console.log("SW tidak ditemukan."));
     }
@@ -542,7 +550,6 @@
         } catch (e) { console.error("Gagal memuat database:", e); }
     }
 
-    // BUG FIX #1: Pengamanan Quota Exceeded & Try...Catch
     function simpanDatabase() {
         try {
             const dataString = JSON.stringify(AppState.db);
@@ -576,7 +583,6 @@
         buatId: () => Date.now().toString(36) + Math.random().toString(36).substr(2, 5),
         formatRp: (angka) => "Rp " + (angka || 0).toLocaleString('id-ID'),
         amanHTML: (teks) => teks ? String(teks).replace(/[&<>'"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[c])) : "-",
-        // BUG FIX #2: Sanitasi Excel (Anti DDE/CSV Injection)
         sanitizeExcel: (str) => {
             if (!str) return '-';
             const s = String(str);
@@ -618,7 +624,6 @@
         document.getElementById(idHalaman).classList.remove('hidden');
         event.currentTarget.classList.add('active');
         
-        // BUG FIX #18 & #19: Pembaruan Stale Data & Pembersihan Form Bocor
         if (idHalaman !== 'pemasukan') { document.getElementById('in-amount').value = ''; document.getElementById('in-desc').value = ''; }
         if (idHalaman !== 'pengeluaran') { document.getElementById('out-amount').value = ''; document.getElementById('out-desc').value = ''; }
 
@@ -661,7 +666,6 @@
     });
 
     function showPopup(mode, pesan, warnaTema = 'green', callback = null, nilaiAwal = null, isAngka = false) {
-        // BUG FIX #16: Cegah tumpukan modal dengan mereset input callback sebelumnya
         document.getElementById('modal-btn-ok').onclick = null;
         
         const overlay = document.getElementById('custom-modal'), judul = document.getElementById('modal-title'), teks = document.getElementById('modal-text'), input = document.getElementById('modal-input'), btnBatal = document.getElementById('modal-btn-cancel'), btnOk = document.getElementById('modal-btn-ok');
@@ -700,7 +704,6 @@
     }
 
     function saveData(event, tipe) {
-        // BUG FIX #4: Anti Spam Klik 
         const btn = event.currentTarget; 
         btn.style.pointerEvents = 'none'; 
         btn.style.opacity = '0.6';
@@ -724,7 +727,7 @@
         if (tipe === 'expense') setCustomVal('out-plot', 'out-plot-trigger', 'out-plot-opts', '');
         
         updateRekap(); 
-        updatePlotList(); // Pastikan update list plot dipanggil
+        updatePlotList(); 
         showPopup('alert', "Catatan berhasil disimpan!", tipe === 'expense' ? 'red' : 'green');
     }
 
@@ -755,7 +758,6 @@
         document.getElementById('edit-modal').classList.remove('hidden');
         
         document.getElementById('edit-btn-save').onclick = () => {
-            // BUG FIX #5 & #12: Validasi input SEBELUM diutak-atik databasenya
             const nomBaru = Math.abs(Number(document.getElementById('edit-amount').value.replace(/\./g, '')));
             const ketBaru = document.getElementById('edit-desc').value.trim();
             const dompetBaru = document.getElementById('edit-wallet').value;
@@ -765,7 +767,6 @@
             if (isNaN(nomBaru) || nomBaru <= 0) return showPopup('alert', "Jumlah tidak valid!", 'red');
             if (!ketBaru) return showPopup('alert', "Keterangan tidak boleh kosong!", 'red');
 
-            // BUG FIX #14: Cegah render ulang jika tidak ada perubahan
             if (data.amount === nomBaru && data.wallet === dompetBaru && data.date === tglBaru && data.desc === ketBaru && data.plotId === plotBaru) {
                 document.getElementById('edit-modal').classList.add('hidden'); return;
             }
@@ -813,7 +814,6 @@
         const nama = document.getElementById('plot-name').value.trim(), target = Math.abs(Number(document.getElementById('plot-amount').value.replace(/\./g, '')));
         if (!nama || isNaN(target) || target <= 0) return showPopup('alert', "Isi Nama & Target!", 'red');
         
-        // BUG FIX #17: Pencegahan nama plot kembar
         if (AppState.db.plots.some(p => p.name.toLowerCase() === nama.toLowerCase())) return showPopup('alert', 'Nama Plot sudah ada!', 'red');
         
         AppState.db.plots.push({ id: Utils.buatId(), name: nama, target: target });
@@ -823,7 +823,6 @@
 
     function editPlot(idPlot, jenis) {
         const plot = AppState.db.plots.find(x => x.id === idPlot), isAngka = jenis === 'target';
-        // BUG FIX #11: Pemberitahuan khusus untuk mengedukasi pengguna versi basic
         const msg = isAngka ? "Ubah Target: (Perubahan akan berlaku lintas bulan)" : "Ubah Nama:";
         showPopup('edit', msg, 'gold', val => {
             if (!val) return;
@@ -849,7 +848,6 @@
         if (AppState.db.plots.length === 0) { wadah.innerHTML = '<div style="text-align:center; color:var(--border-color); font-size:12px; padding:10px 0;">- Belum ada alokasi -</div>'; return; }
         const pengeluaranBulanIni = AppState.db.expense.filter(e => e.date.startsWith(filterBulan));
         let h = ''; AppState.db.plots.forEach(p => {
-            // BUG FIX #15: Pencegahan progress bar menjadi minus (Meski jarang terjadi)
             const tp = Math.max(0, pengeluaranBulanIni.reduce((sum, e) => e.plotId === p.id ? sum + e.amount : sum, 0));
             const ps = p.target > 0 ? Math.max(0, Math.min((tp / p.target) * 100, 100)) : (tp > 0 ? 100 : 0);
             
@@ -887,8 +885,12 @@
         elMasuk.innerHTML = adaIn ? htmlMasuk : '<li style="justify-content:center; color:var(--text-muted); font-size:11px; border:none; padding-top:20px;">- Kosong -</li>';
         elKeluar.innerHTML = adaOut ? htmlKeluar : '<li style="justify-content:center; color:var(--text-muted); font-size:11px; border:none; padding-top:20px;">- Kosong -</li>';
         
+        // BUG FIX #21: Total Pemasukan/Pengeluaran sekarang dihitung per bulan yang difilter, bukan total seluruh zaman
         const st = getSaldoDompet('Tunai'), sb = getSaldoDompet('Bank'), se = getSaldoDompet('e-Wallet');
-        let gi = 0, go = 0; AppState.db.income.forEach(i => gi += i.amount); AppState.db.expense.forEach(e => go += e.amount);
+        let gi = 0, go = 0; 
+        AppState.db.income.forEach(i => { if (i.date.startsWith(blnSortir)) gi += i.amount; }); 
+        AppState.db.expense.forEach(e => { if (e.date.startsWith(blnSortir)) go += e.amount; });
+        
         document.getElementById('total-balance').innerText = Utils.formatRp(st + sb + se);
         document.getElementById('bal-tunai').innerText = Utils.formatRp(st); document.getElementById('bal-bank').innerText = Utils.formatRp(sb); document.getElementById('bal-ewallet').innerText = Utils.formatRp(se);
         document.getElementById('total-in').innerText = Utils.formatRp(gi); document.getElementById('total-out').innerText = Utils.formatRp(go);
@@ -923,17 +925,29 @@
         XLSX.writeFile(wb, `keuanganKU_Backup_${Utils.tglHariIni()}.xlsx`);
     }
 
-    // BUG FIX #3: Perbaikan Timezone Excel
-    function parseExcelDate(val) { 
-        if (!val) return Utils.tglHariIni(); 
-        if (typeof val === 'number') {
-            const date = new Date(Math.round((val - 25569) * 86400 * 1000));
-            return `${date.getUTCFullYear()}-${String(date.getUTCMonth()+1).padStart(2,'0')}-${String(date.getUTCDate()).padStart(2,'0')}`;
+    // BUG FIX #22: Normalisasi dan Keamanan Format Tanggal Import (Bypass Format US/UK Date)
+    function parseExcelDate(val) {
+        if (!val) return Utils.tglHariIni();
+        if (!isNaN(val)) { 
+            let days = Math.floor(val);
+            if (days < 60) days++; 
+            const d = new Date(Date.UTC(1899, 11, 30 + days));
+            return d.toISOString().split('T')[0]; 
         }
-        if (typeof val === 'string') { let p = val.split(/[-/]/); if (p.length === 3) { if (p[2].length === 4) return `${p[2]}-${p[1].padStart(2,'0')}-${p[0].padStart(2,'0')}`; if (p[0].length === 4) return `${p[0]}-${p[1].padStart(2,'0')}-${p[2].padStart(2,'0')}`; } } return Utils.tglHariIni(); 
+        if (typeof val === 'string') { 
+            let p = val.split(/[-/]/); 
+            if (p.length === 3) { 
+                if (p[2].length === 4) {
+                    let m = parseInt(p[1], 10);
+                    if (m > 12) return `${p[2]}-${p[0].padStart(2,'0')}-${p[1].padStart(2,'0')}`;
+                    return `${p[2]}-${p[1].padStart(2,'0')}-${p[0].padStart(2,'0')}`;
+                }
+                if (p[0].length === 4) return `${p[0]}-${p[1].padStart(2,'0')}-${p[2].padStart(2,'0')}`; 
+            } 
+        }
+        return Utils.tglHariIni();
     }
     
-    // BUG FIX #7: Cek Case Sensitif & Bug Decimal (#6)
     function getExCol(r, possibleNames) { const keys = Object.keys(r); const foundKey = keys.find(k => possibleNames.includes(k.toUpperCase())); return foundKey ? r[foundKey] : undefined; }
     function validasiDompet(n) { const d = String(n || '').trim(); return ['Tunai', 'Bank', 'e-Wallet'].includes(d) ? d : 'Tunai'; }
     function bersihkanAngka(v) { if (typeof v === 'number') return Math.abs(Math.round(v)); const b = String(v).replace(/[^0-9]/g, ''); return b ? Math.abs(Number(b)) : NaN; }
@@ -956,7 +970,6 @@
         reader.readAsArrayBuffer(file);
     }
 
-    // BUG FIX #10: Konfirmasi Perlindungan Sejarah Import Ringkas
     function confirmImportRingkas() {
         document.getElementById('import-modal').classList.add('hidden');
         showPopup('confirm', "Import Ringkas akan mengganti histori lama dengan SALDO AWAL (hari ini). Lanjutkan?", 'red', () => {
@@ -964,7 +977,6 @@
         });
     }
 
-    // BUG FIX #13: Cek Duplikasi Global Lintas Kategori
     function isIdExistInDb(id) {
         return AppState.db.income.some(x=>x.id===id) || AppState.db.expense.some(x=>x.id===id) || AppState.db.mutations.some(x=>x.id===id);
     }
@@ -992,9 +1004,8 @@
                 const dt = validasiDompet(getExCol(r, ['DOMPET TUJUAN', 'KE'])); 
                 
                 let rId = getExCol(r, ['ID']); 
-                if (rId && isIdExistInDb(rId)) return; // Blok jika ID kembar dipakai
+                if (rId && isIdExistInDb(rId)) return; 
 
-                // BUG FIX #8: Pengamanan Plot Hantu
                 let rPlotId = getExCol(r, ['PLOTID']);
                 if (rPlotId === '-') rPlotId = null;
                 if (rPlotId && !AppState.db.plots.some(p => p.id === rPlotId)) rPlotId = null;
@@ -1010,7 +1021,6 @@
                     if (!isExist) AppState.db.expense.push({ id: rId || Utils.buatId(), date: d, desc: ket, amount: nom, wallet: da, plotId: rPlotId });
                 }
                 if (tipe === 'MUTASI') {
-                    // BUG FIX #9: Bypass perlindungan Mutasi Asal == Tujuan
                     if (da === dt) return; 
                     const isExist = rId ? false : AppState.db.mutations.some(m => m.date === d && m.amount === nom && m.from === da && m.to === dt);
                     if (!isExist) AppState.db.mutations.push({ id: rId || Utils.buatId(), date: d, from: da, to: dt, amount: nom });
